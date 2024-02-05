@@ -1,0 +1,555 @@
+/* Existing styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(images/background1-feyth.png);
+    background-position: center;
+    background-size: cover;
+    padding: 10px 10%;
+    overflow: hidden;
+}
+
+.logo img {
+    max-width: 80px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+nav {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+
+.login-btn {
+    text-decoration: none;
+    color: #333;
+    margin-right: 15px;
+    font-weight: 400;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #df4881, #c430d7);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+}
+
+.content {
+    margin-top: 5%;
+    max-width: 600px;
+    padding-top: 7%;
+}
+
+.content h1 {
+    font-size: 70px;
+    line-height: 60px;
+    font-weight: bold;
+    color: #222;
+}
+
+.content p {
+    margin: 10px 0 30px;
+    color: #333;
+    animation-delay: 0.5s;
+}
+
+.content .btn {
+    padding: 15px 80px;
+    font-size: 16px;
+    animation-delay: 1s;
+}
+
+.btn:hover {
+    border-top-right-radius: 30px;
+}
+
+.feature-img {
+    width: 530px;
+    position: absolute;
+    top: 100px;
+    right: 10%;
+    overflow: hidden;
+}
+
+.feature-img::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30%; /* Adjust the height of the gradient as needed */
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.7));
+}
+
+.feature-img.anim {
+    animation-delay: 1.5s;
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 1s linear forwards;
+}
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+/*------ PHONE VIEW --------*/
+@media only screen and (max-width: 600px) {
+    .hero {
+        padding: 10px 5%;
+    }
+
+    .logo img {
+        max-width: 60px;
+    }
+
+    nav ul li {
+        margin: 10px 10px;
+    }
+
+    .content {
+        margin-top: 10%;
+        max-width: 100%;
+    }
+
+    .content h1 {
+        font-size: 40px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .content .btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    .feature-img {
+        width: 100%;
+        position: static;
+        top: auto;
+        right: auto;
+    }
+
+    .feature-img::after {
+        display: none;
+    }
+}
+
+/*------ ABOUT ME--------*/
+
+.about {
+    width: 100%; /* Adjust the width as needed */
+    background-image: url(images/background-feyth.png);
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto; /* Center the section */
+    text-align: left;
+    padding-top: 100px;
+}
+
+.abouttext {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.abouttext.about-anim {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.abouttext.about-anim.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-content {
+    display: flex;
+}
+
+.about-col {
+    margin-right: 20px; /* Updated margin value */
+    border-radius: 10px;
+}
+
+.about-col img {
+    width: 70%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Apply border-radius to the image */
+}
+
+.about-text p{
+    margin: 10px 0 30px;
+    color: #333;
+}
+
+.about-text h1 {
+    font-size: 70px;
+    color: #222;
+}
+
+/* K-POP SECTION */
+.kpop {
+    width: 100%;
+    background-color: #f0f0f0; /* Adjust background color as needed */
+    background-image: url(images/background-feyth.png);
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.kpop-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Adjust background color and opacity */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex; /* Make the content a flex container */
+}
+
+.kpop-text {
+    flex: 1; /* Take up remaining space in the flex container */
+}
+
+.kpop-heading {
+    font-size: 50px;
+    font-weight: 600;
+    text-align: left;
+    color: #333; /* Adjust text color as needed */
+}
+
+.kpop-text p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.kpop-image {
+    width: 40%; /* Adjust the width of the image container */
+    overflow: hidden;
+}
+
+.kpop-image img {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Apply border-radius to the image */
+}
+
+/* ABOUT HER SECTION */
+.about-her {
+    width: 100%;
+    background-color: #f0f0f0;  
+    background-position: center;
+    background-size: cover;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-her-heading {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333; /* Adjust text color as needed */
+}
+
+.characteristics,
+.personal-growth {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.section-heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: #555; /* Adjust text color as needed */
+    margin-bottom: 15px;
+}
+
+.characteristics ul {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Center the characteristics */
+}
+
+.characteristics li {
+    font-size: 18px;
+    color: #333; /* Adjust text color as needed */
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #ff8abf; /* Border color */
+    border-radius: 20px; /* Smooth edges */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.characteristics li:hover {
+    color: #fff; /* Adjust text color on hover as needed */
+    background-color: #ff8abf; /* Background color on hover */
+}
+
+.personal-growth p {
+    font-size: 16px;
+    color: #777; /* Adjust text color as needed */
+    line-height: 1.6;
+}
+
+.section-heading {
+    font-size: 15px; /* Adjust the font size as needed */
+    color: #333; /* Adjust the text color as needed */
+    margin-bottom: 10px;
+}
+
+.section-subheading {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* PHILOSOPHY SECTION */
+/* Life Philosophy Section */
+.philosophy {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #f9f9f9; /* Set your desired background color */
+}
+
+.philosophy-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    font-size: 30px; /* Set your desired font size */
+    color: #333; /* Set your desired text color */
+    margin-bottom: 20px;
+}
+
+.emphasized-phrase {
+    margin-bottom: 30px;
+}
+
+.emphasis {
+    font-size: 24px;
+    font-weight: bold;
+    color: #df4881; /* Set your desired color for the emphasized phrase */
+}
+
+.subtext {
+    font-size: 16px;
+    color: #777; /* Set your desired color for the subtext */
+}
+
+.description {
+    font-size: 18px;
+    color: #555; /* Set your desired color for the description text */
+    line-height: 1.6;
+}
+
+
+/* Philosophy Section */
+.philosophy {
+    margin-top: 30px;
+    padding: 40px; /* Increase padding for better spacing */
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center; /* Center the content text */
+}
+
+.emphasized-phrase {
+    font-size: 24px; /* Increase font size for emphasis */
+    font-weight: 600;
+    color: #df4881; /* Adjust color as needed */
+    margin-bottom: 20px; /* Improve spacing */
+}
+
+.description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Life Goals Section */
+.life-goals {
+    margin-top: 30px;
+    text-align: center;
+    padding: 80px 20px; /* Adjust padding for better spacing */
+    background-color: #f9f9f9; /* Set your desired background color */
+    border-radius: 10px;
+}
+
+.emphasis {
+    font-size: 28px; /* Increase font size for emphasis */
+    font-weight: bold;
+    color: #df4881; /* Set your desired color for the emphasized phrase */
+}
+
+.subtext {
+    font-size: 18px; /* Adjust font size for subtext */
+    color: #777; /* Set your desired color for the subtext */
+}
+
+.description {
+    font-size: 16px;
+    color: #555; /* Set your desired color for the description text */
+    margin-top: 20px; /* Add margin for separation */
+}
+
+.life-goals h2.section-heading {
+    font-size: 36px;
+    color: #df4881; /* Set your desired color for the section heading */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Emphasized Phrase Box */
+.emphasized-phrase {
+    background-color: #df4881; /* Set background color for the box */
+    color: #fff; /* Set text color */
+    border-radius: 15px; /* Add border-radius for smooth edges */
+    padding: 20px; /* Add padding for spacing */
+    margin-bottom: 30px;
+    overflow: hidden; /* Add overflow property to fix invisible text */
+}
+
+.emphasis {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff; /* Set text color for emphasized phrase */
+}
+
+.subtext {
+    font-size: 16px;
+    color: #fff; /* Set text color for subtext */
+}
+
+/* Footer Section */
+/* FOOTER SECTION */
+.footer {
+    background-color: #242121; /* Set your desired background color */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info h2 {
+    color: #fff; /* Set the text color to white */
+}
+.contact-info p {
+    color: #fff; /* Set the text color to white */
+}
+
+.contact-item {
+    margin: 5px 0;
+}
+
+/* CONTACT SECTION */
+.contact {
+    text-align: center;
+    padding: 150px 0;
+    background-color: #242121; /* Set your desired background color */
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    font-size: 36px;
+    color: #ffffff; /* Set your desired text color */
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: white; /* Set your desired color for the contact information text */
+    line-height: 1.6;
+}
+
+/* Extracurriculars Section */
+.extracurriculars-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    font-size: 42px; /* Increase font size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Center the text */
+}
+
+.activity {
+    margin-bottom: 30px;
+}
+
+.activity-heading {
+    font-size: 24px;
+    color: #df4881;
+    margin-bottom: 10px;
+}
+
+.activity-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
